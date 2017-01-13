@@ -1,10 +1,10 @@
 <script>
 function callback() {
-<?	
+<?
 //################################################# CHANGE THIS INFORMATION ACCORDINGLY #####################################
 $apiSecurityKey = "123456qHP7-gPHjliwXXXXXXW78FsSH5Q6Gg1JAAAAAA"; //get your API security key from the Z-Checkout listing page
 
-//get query string 
+//get query string
 $queryString = 'id=' . $_REQUEST['id'] . '&tenantId=' . $_REQUEST['tenantId'] . '&timestamp=' . $_REQUEST['timestamp'] . '&token=' . $_REQUEST['token'];
 //concatenate API security key with query string
 $queryStringToHash = $queryString . $apiSecurityKey;
@@ -34,12 +34,12 @@ if ($securityClear == true) {
 			parent.hostedpagecallback_success('<?=$_REQUEST['subscription_id']?>','<?=$_REQUEST['first_name']?>');
 	<?	}
 		else {?>
-			parent.hostedpagecallback_failure('<?=$_REQUEST['errorCode']?>', 
+			parent.hostedpagecallback_failure('<?=$_REQUEST['errorCode']?>',
 					'<?=$_REQUEST['errorMessage']?>'
 					);
 	<?	}
 }
-?>	
+?>
 }
 </script>
 
